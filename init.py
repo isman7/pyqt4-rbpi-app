@@ -37,7 +37,7 @@ class Window(QtGui.QMainWindow):
 
         
         
-        self.showFullScreen()
+        self.showMaximized()
         
     def style_choice(self, text):
         self.styleChoice.setText(text)
