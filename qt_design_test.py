@@ -84,3 +84,15 @@ class Ui_MainWindow(object):
         self.pushButton_7.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_8.setText(_translate("MainWindow", "PushButton", None))
 
+
+import sys
+def run():
+    
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit()
+
+run()
