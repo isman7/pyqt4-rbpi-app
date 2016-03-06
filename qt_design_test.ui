@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QGraphicsView" name="graphicsView">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -38,8 +38,10 @@
        <height>290</height>
       </rect>
      </property>
+     <property name="text">
+      <string>Press 'Run' to make a QR Code!</string>
+     </property>
     </widget>
-    <zorder>graphicsView</zorder>
     <zorder>loadButton</zorder>
     <zorder>quitButton</zorder>
     <zorder>saveButton</zorder>
@@ -48,6 +50,7 @@
     <zorder>runButton</zorder>
     <zorder>createButton</zorder>
     <zorder>pushButton_8</zorder>
+    <zorder>label</zorder>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">

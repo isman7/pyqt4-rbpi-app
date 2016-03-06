@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Sun Mar  6 19:13:38 2016
+# Created: Sun Mar  6 21:19:22 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -34,9 +34,9 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtGui.QFrame.Raised)
         self.frame.setObjectName(_fromUtf8("frame"))
-        self.graphicsView = QtGui.QGraphicsView(self.frame)
-        self.graphicsView.setGeometry(QtCore.QRect(10, 10, 448, 290))
-        self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
+        self.label = QtGui.QLabel(self.frame)
+        self.label.setGeometry(QtCore.QRect(10, 10, 448, 290))
+        self.label.setObjectName(_fromUtf8("label"))
         self.widget = QtGui.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(10, 371, 771, 51))
         self.widget.setObjectName(_fromUtf8("widget"))
@@ -153,6 +153,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.label.setText(_translate("MainWindow", "Press \'Run\' to make a QR Code!", None))
         self.loadButton.setText(_translate("MainWindow", "Load", None))
         self.saveButton.setText(_translate("MainWindow", "Save", None))
         self.runButton.setText(_translate("MainWindow", "Run", None))
