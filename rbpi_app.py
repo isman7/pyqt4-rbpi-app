@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'qt_design_test.ui'
-#
-# Created: Sun Mar  6 16:29:16 2016
-#      by: PyQt4 UI code generator 4.11.3
-#
-# WARNING! All changes made in this file will be lost!
-
 
 from PyQt4 import QtGui, QtCore
 from qt_design_test import Ui_MainWindow
@@ -48,7 +41,6 @@ class main_window(QtGui.QMainWindow):
         )
         qr.add_data('https://github.com/isman7/pyqt4-rbpi-app/blob/1acd121f862fa837008fbb3674145cb1292b44d6/qt_design_test.py')
         qr.make(fit=True)
-        qr.print_ascii()
         img = qr.make_image()
         self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img))
         self.ui.label.setPixmap(self.pix)
