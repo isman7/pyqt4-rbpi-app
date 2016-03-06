@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Sun Mar  6 17:24:05 2016
+# Created: Sun Mar  6 17:35:08 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,7 +43,8 @@ class Ui_MainWindow(object):
         self.pushButton_4.setObjectName(_fromUtf8("pushButton_4"))
         self.quitButton = QtGui.QPushButton(self.centralwidget)
         self.quitButton.setGeometry(QtCore.QRect(680, 310, 92, 27))
-        self.quitButton.setStyleSheet(_fromUtf8("display: inline-block;\n"
+        self.quitButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
 "padding: 6px 12px;\n"
 "margin-bottom: 0;\n"
 "font-size: 14px;\n"
@@ -56,7 +57,13 @@ class Ui_MainWindow(object):
 "color: #fff;\n"
 "background-color: #f0ad4e;\n"
 "border-color: #eea236;\n"
-""))
+"}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"color: #fff;\n"
+"background-color: #ec971f;\n"
+"border-color: #d58512;\n"
+"}"))
         self.quitButton.setObjectName(_fromUtf8("quitButton"))
         self.pushButton_6 = QtGui.QPushButton(self.centralwidget)
         self.pushButton_6.setGeometry(QtCore.QRect(680, 190, 92, 27))

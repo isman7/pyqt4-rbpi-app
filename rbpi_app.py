@@ -8,8 +8,9 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt4 import QtGui
+from PyQt4 import QtGui, QtCore
 from qt_design_test import Ui_MainWindow
+import qtawesome as qta
 
 class main_window(QtGui.QMainWindow):
     def __init__(self):
@@ -19,9 +20,17 @@ class main_window(QtGui.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
-        
-        
         self.ui.quitButton.clicked.connect(self.close_app)
+        
+        # Get icons by name.
+        fa_icon = qta.icon('fa.times', options=[{'scale_factor': 0.8,
+                                                 'hover': 'fa.sign-out',
+                                                 'active': 'fa.sign-out',
+                                                 'color': 'white'}])
+        self.ui.quitButton.setIcon(fa_icon)
+        
+#        asl_icon = qta.icon('ei.asl')
+#        elusive_button = QtGui.QPushButton(asl_icon, 'Elusive Icons!')
     
     def close_app(self):
         print("Adeu")
