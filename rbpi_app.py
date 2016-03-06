@@ -5,6 +5,7 @@ from PyQt4 import QtGui, QtCore
 from qt_design_test import Ui_MainWindow
 import qtawesome as qta
 import qrcode
+from PIL import Image
 from PIL import ImageQt
 
 class main_window(QtGui.QMainWindow):
@@ -17,6 +18,7 @@ class main_window(QtGui.QMainWindow):
         
         self.ui.quitButton.clicked.connect(self.close_app)
         self.ui.runButton.clicked.connect(self.create_qrcode)
+        self.ui.loadButton.clicked.connect(self.open_file)
         
         # Get icons by name.
         fa_exit = qta.icon('fa.times', options=[{'scale_factor': 0.8,
@@ -45,6 +47,13 @@ class main_window(QtGui.QMainWindow):
         self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img))
         self.ui.label.setPixmap(self.pix)
     
+    def open_file(self):
+        name = QtGui.QFileDialog.getOpenFileName(self, 'Load File')
+        img_loaded = Image.open(name)
+        self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img_loaded))
+        self.ui.label.setPixmap(self.pix)
+        
+        
     def close_app(self):
         print("Adeu")
         sys.exit()
