@@ -27,26 +27,18 @@ class main_window(QtGui.QMainWindow):
         
         # Get icons by name.
         fa_exit = qta.icon('fa.times', options=[{'scale_factor': 0.8,
-                                                 'hover': 'fa.sign-out',
-                                                 'active': 'fa.sign-out',
                                                  'color': 'white'}])
-        fa_cog = qta.icon('fa.cog', options=[{'scale_factor': 0.8,
-                                                 'hover': 'fa.cogs',
-                                                 'active': 'fa.cogs',
+        fa_cogs = qta.icon('fa.cogs', options=[{'scale_factor': 0.8,
                                                  'color': 'white'}])
-        fa_folder = qta.icon('fa.folder-o', options=[{'scale_factor': 0.8,
-                                                 'hover': 'fa.folder-open-o',
-                                                 'active': 'fa.folder-open-o',
+        fa_folder = qta.icon('fa.folder-open-o', options=[{'scale_factor': 0.8,
                                                  'color': 'black'}])
         fa_floppy = qta.icon('fa.floppy-o', options=[{'scale_factor': 0.8,
                                                  'color': 'black'}])                                         
         self.ui.quitButton.setIcon(fa_exit)
         self.ui.saveButton.setIcon(fa_floppy)
-        self.ui.runButton.setIcon(fa_cog)
+        self.ui.runButton.setIcon(fa_cogs)
         self.ui.loadButton.setIcon(fa_folder)
-        
-#        asl_icon = qta.icon('ei.asl')
-#        elusive_button = QtGui.QPushButton(asl_icon, 'Elusive Icons!')
+
     def create_qrcode(self):
         qr = qrcode.QRCode(
             version=7,
@@ -60,14 +52,10 @@ class main_window(QtGui.QMainWindow):
         img = qr.make_image()
         self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img))
         self.ui.label.setPixmap(self.pix)
-        
-
-
     
     def close_app(self):
         print("Adeu")
         sys.exit()
-
 
 import sys
 
@@ -78,7 +66,5 @@ def run():
     mainWindow = main_window()
     mainWindow.showFullScreen()
     sys.exit()
-
-
 
 run()
