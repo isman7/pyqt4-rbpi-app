@@ -23,11 +23,26 @@ class main_window(QtGui.QMainWindow):
         self.ui.quitButton.clicked.connect(self.close_app)
         
         # Get icons by name.
-        fa_icon = qta.icon('fa.times', options=[{'scale_factor': 0.8,
+        fa_exit = qta.icon('fa.times', options=[{'scale_factor': 0.8,
                                                  'hover': 'fa.sign-out',
                                                  'active': 'fa.sign-out',
                                                  'color': 'white'}])
-        self.ui.quitButton.setIcon(fa_icon)
+        fa_cogs = qta.icon('fa.cogs', options=[{'scale_factor': 0.8,
+                                                 'hover': 'fa.sign-out',
+                                                 'active': 'fa.sign-out',
+                                                 'color': 'white'}])
+        fa_folder_open = qta.icon('fa.folder-open-o', options=[{'scale_factor': 0.8,
+                                                 'hover': 'fa.sign-out',
+                                                 'active': 'fa.sign-out',
+                                                 'color': 'black'}])
+        fa_floppy = qta.icon('fa.floppy-o', options=[{'scale_factor': 0.8,
+                                                 'hover': 'fa.sign-out',
+                                                 'active': 'fa.sign-out',
+                                                 'color': 'black'}])                                         
+        self.ui.quitButton.setIcon(fa_exit)
+        self.ui.saveButton.setIcon(fa_floppy)
+        self.ui.runButton.setIcon(fa_cogs)
+        self.ui.loadButton.setIcon(fa_folder_open)
         
 #        asl_icon = qta.icon('ei.asl')
 #        elusive_button = QtGui.QPushButton(asl_icon, 'Elusive Icons!')

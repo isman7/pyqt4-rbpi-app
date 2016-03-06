@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Sun Mar  6 17:35:08 2016
+# Created: Sun Mar  6 19:13:38 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,20 +29,93 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 480)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.pushButton = QtGui.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(680, 70, 92, 27))
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.pushButton_2 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(680, 30, 92, 27))
-        self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
-        self.pushButton_3 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(680, 110, 92, 27))
-        self.pushButton_3.setObjectName(_fromUtf8("pushButton_3"))
-        self.pushButton_4 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(680, 150, 92, 27))
-        self.pushButton_4.setObjectName(_fromUtf8("pushButton_4"))
-        self.quitButton = QtGui.QPushButton(self.centralwidget)
-        self.quitButton.setGeometry(QtCore.QRect(680, 310, 92, 27))
+        self.frame = QtGui.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(10, 10, 468, 311))
+        self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtGui.QFrame.Raised)
+        self.frame.setObjectName(_fromUtf8("frame"))
+        self.graphicsView = QtGui.QGraphicsView(self.frame)
+        self.graphicsView.setGeometry(QtCore.QRect(10, 10, 448, 290))
+        self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
+        self.widget = QtGui.QWidget(self.centralwidget)
+        self.widget.setGeometry(QtCore.QRect(10, 371, 771, 51))
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.horizontalLayout = QtGui.QHBoxLayout(self.widget)
+        self.horizontalLayout.setMargin(0)
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.loadButton = QtGui.QPushButton(self.widget)
+        self.loadButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
+"padding: 6px 12px;\n"
+"margin-bottom: 0;\n"
+"font-size: 14px;\n"
+"font-weight: normal;\n"
+"line-height: 1.42857143;\n"
+"text-align: center;\n"
+"white-space: nowrap;\n"
+"vertical-align: middle;\n"
+"border: 1px solid transparent;\n"
+"color: #333;\n"
+"background-color: #fff;\n"
+"border-color: #ccc;\n"
+"}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"  color: #333;\n"
+"  background-color: #e6e6e6;\n"
+"  border-color: #adadad;\n"
+"}"))
+        self.loadButton.setObjectName(_fromUtf8("loadButton"))
+        self.horizontalLayout.addWidget(self.loadButton)
+        self.saveButton = QtGui.QPushButton(self.widget)
+        self.saveButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
+"padding: 6px 12px;\n"
+"margin-bottom: 0;\n"
+"font-size: 14px;\n"
+"font-weight: normal;\n"
+"line-height: 1.42857143;\n"
+"text-align: center;\n"
+"white-space: nowrap;\n"
+"vertical-align: middle;\n"
+"border: 1px solid transparent;\n"
+"color: #333;\n"
+"background-color: #fff;\n"
+"border-color: #ccc;\n"
+"}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"  color: #333;\n"
+"  background-color: #e6e6e6;\n"
+"  border-color: #adadad;\n"
+"}"))
+        self.saveButton.setObjectName(_fromUtf8("saveButton"))
+        self.horizontalLayout.addWidget(self.saveButton)
+        self.runButton = QtGui.QPushButton(self.widget)
+        self.runButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
+"padding: 6px 12px;\n"
+"margin-bottom: 0;\n"
+"font-size: 14px;\n"
+"font-weight: normal;\n"
+"line-height: 1.42857143;\n"
+"text-align: center;\n"
+"white-space: nowrap;\n"
+"vertical-align: middle;\n"
+"border: 1px solid transparent;\n"
+"color: #fff;\n"
+"background-color: #5cb85c;\n"
+"border-color: #4cae4c;\n"
+"}\n"
+"QPushButton:hover:!pressed{\n"
+"  color: #fff;\n"
+"  background-color: #449d44;\n"
+"  border-color: #398439;\n"
+"}\n"
+""))
+        self.runButton.setObjectName(_fromUtf8("runButton"))
+        self.horizontalLayout.addWidget(self.runButton)
+        self.quitButton = QtGui.QPushButton(self.widget)
         self.quitButton.setStyleSheet(_fromUtf8("QPushButton{\n"
 "display: inline-block;\n"
 "padding: 6px 12px;\n"
@@ -60,28 +133,12 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover:!pressed{\n"
-"color: #fff;\n"
-"background-color: #ec971f;\n"
-"border-color: #d58512;\n"
+"  color: #fff;\n"
+"  background-color: #ec971f;\n"
+"  border-color: #d58512;\n"
 "}"))
         self.quitButton.setObjectName(_fromUtf8("quitButton"))
-        self.pushButton_6 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_6.setGeometry(QtCore.QRect(680, 190, 92, 27))
-        self.pushButton_6.setObjectName(_fromUtf8("pushButton_6"))
-        self.pushButton_7 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_7.setGeometry(QtCore.QRect(680, 230, 92, 27))
-        self.pushButton_7.setObjectName(_fromUtf8("pushButton_7"))
-        self.pushButton_8 = QtGui.QPushButton(self.centralwidget)
-        self.pushButton_8.setGeometry(QtCore.QRect(680, 270, 92, 27))
-        self.pushButton_8.setObjectName(_fromUtf8("pushButton_8"))
-        self.frame = QtGui.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(20, 10, 468, 311))
-        self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtGui.QFrame.Raised)
-        self.frame.setObjectName(_fromUtf8("frame"))
-        self.graphicsView = QtGui.QGraphicsView(self.frame)
-        self.graphicsView.setGeometry(QtCore.QRect(10, 10, 448, 290))
-        self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
+        self.horizontalLayout.addWidget(self.quitButton)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
@@ -96,12 +153,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.pushButton.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_3.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_4.setText(_translate("MainWindow", "PushButton", None))
+        self.loadButton.setText(_translate("MainWindow", "Load", None))
+        self.saveButton.setText(_translate("MainWindow", "Save", None))
+        self.runButton.setText(_translate("MainWindow", "Run", None))
         self.quitButton.setText(_translate("MainWindow", "Quit", None))
-        self.pushButton_6.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_7.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_8.setText(_translate("MainWindow", "PushButton", None))
 
