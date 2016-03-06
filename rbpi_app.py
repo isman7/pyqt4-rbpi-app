@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Sun Mar  6 16:59:59 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created: Sun Mar  6 16:29:16 2016
+#      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -44,6 +44,7 @@ class Ui_MainWindow(object):
         self.quitButton = QtGui.QPushButton(self.centralwidget)
         self.quitButton.setGeometry(QtCore.QRect(680, 310, 92, 27))
         self.quitButton.setObjectName(_fromUtf8("quitButton"))
+        self.quitButton.clicked.connect(self.close_app)
         self.pushButton_6 = QtGui.QPushButton(self.centralwidget)
         self.pushButton_6.setGeometry(QtCore.QRect(680, 190, 92, 27))
         self.pushButton_6.setObjectName(_fromUtf8("pushButton_6"))
@@ -83,4 +84,20 @@ class Ui_MainWindow(object):
         self.pushButton_6.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_7.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_8.setText(_translate("MainWindow", "PushButton", None))
+        
+    def close_app(self):
+        print("Adeu")
+        sys.exit()
 
+
+import sys
+def run():
+    
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.showFullScreen()
+    sys.exit()
+
+run()
