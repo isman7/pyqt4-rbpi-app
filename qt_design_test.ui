@@ -75,6 +75,22 @@
       <height>27</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border: 1px solid transparent;
+color: #fff;
+background-color: #f0ad4e;
+border-color: #eea236;
+</string>
+    </property>
     <property name="text">
      <string>Quit</string>
     </property>
