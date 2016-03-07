@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>468</width>
-      <height>311</height>
+      <width>290</width>
+      <height>290</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -32,27 +32,18 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>448</width>
-       <height>290</height>
+       <x>15</x>
+       <y>15</y>
+       <width>260</width>
+       <height>260</height>
       </rect>
      </property>
      <property name="text">
       <string>Press 'Run' to make a QR Code!</string>
      </property>
     </widget>
-    <zorder>loadButton</zorder>
-    <zorder>quitButton</zorder>
-    <zorder>saveButton</zorder>
-    <zorder>pushButton_4</zorder>
-    <zorder>pushButton_7</zorder>
-    <zorder>runButton</zorder>
-    <zorder>createButton</zorder>
-    <zorder>pushButton_8</zorder>
-    <zorder>label</zorder>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -81,10 +72,11 @@ background-color: #fff;
 border-color: #ccc;
 }
 
-QPushButton:hover:!pressed{
+QPushButton:hover:pressed{
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
+border: none;
 }</string>
        </property>
        <property name="text">

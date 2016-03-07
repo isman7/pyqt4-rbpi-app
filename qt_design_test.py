@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Sun Mar  6 21:19:22 2016
+# Created: Mon Mar  7 18:21:41 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,20 +30,20 @@ class Ui_MainWindow(object):
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.frame = QtGui.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(10, 10, 468, 311))
+        self.frame.setGeometry(QtCore.QRect(10, 10, 290, 290))
         self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtGui.QFrame.Raised)
         self.frame.setObjectName(_fromUtf8("frame"))
         self.label = QtGui.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(10, 10, 448, 290))
+        self.label.setGeometry(QtCore.QRect(15, 15, 260, 260))
         self.label.setObjectName(_fromUtf8("label"))
-        self.widget = QtGui.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(10, 371, 771, 51))
-        self.widget.setObjectName(_fromUtf8("widget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.widget)
+        self.layoutWidget = QtGui.QWidget(self.centralwidget)
+        self.layoutWidget.setGeometry(QtCore.QRect(10, 371, 771, 51))
+        self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
+        self.horizontalLayout = QtGui.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setMargin(0)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.loadButton = QtGui.QPushButton(self.widget)
+        self.loadButton = QtGui.QPushButton(self.layoutWidget)
         self.loadButton.setStyleSheet(_fromUtf8("QPushButton{\n"
 "display: inline-block;\n"
 "padding: 6px 12px;\n"
@@ -60,14 +60,15 @@ class Ui_MainWindow(object):
 "border-color: #ccc;\n"
 "}\n"
 "\n"
-"QPushButton:hover:!pressed{\n"
+"QPushButton:hover:pressed{\n"
 "  color: #333;\n"
 "  background-color: #e6e6e6;\n"
 "  border-color: #adadad;\n"
+"border: none;\n"
 "}"))
         self.loadButton.setObjectName(_fromUtf8("loadButton"))
         self.horizontalLayout.addWidget(self.loadButton)
-        self.saveButton = QtGui.QPushButton(self.widget)
+        self.saveButton = QtGui.QPushButton(self.layoutWidget)
         self.saveButton.setStyleSheet(_fromUtf8("QPushButton{\n"
 "display: inline-block;\n"
 "padding: 6px 12px;\n"
@@ -91,7 +92,7 @@ class Ui_MainWindow(object):
 "}"))
         self.saveButton.setObjectName(_fromUtf8("saveButton"))
         self.horizontalLayout.addWidget(self.saveButton)
-        self.runButton = QtGui.QPushButton(self.widget)
+        self.runButton = QtGui.QPushButton(self.layoutWidget)
         self.runButton.setStyleSheet(_fromUtf8("QPushButton{\n"
 "display: inline-block;\n"
 "padding: 6px 12px;\n"
@@ -115,7 +116,7 @@ class Ui_MainWindow(object):
 ""))
         self.runButton.setObjectName(_fromUtf8("runButton"))
         self.horizontalLayout.addWidget(self.runButton)
-        self.quitButton = QtGui.QPushButton(self.widget)
+        self.quitButton = QtGui.QPushButton(self.layoutWidget)
         self.quitButton.setStyleSheet(_fromUtf8("QPushButton{\n"
 "display: inline-block;\n"
 "padding: 6px 12px;\n"

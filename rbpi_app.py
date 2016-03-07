@@ -19,6 +19,8 @@ class main_window(QtGui.QMainWindow):
         self.ui.quitButton.clicked.connect(self.close_app)
         self.ui.runButton.clicked.connect(self.create_qrcode)
         self.ui.loadButton.clicked.connect(self.open_file)
+        self.ui.saveButton.clicked.connect(self.save_file)
+        self.ui.saveButton.setDisabled(True)
         
         # Get icons by name.
         fa_exit = qta.icon('fa.times', options=[{'scale_factor': 0.8,
@@ -46,12 +48,19 @@ class main_window(QtGui.QMainWindow):
         img = qr.make_image()
         self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img))
         self.ui.label.setPixmap(self.pix)
+        self.ui.saveButton.setDisabled(False)
     
     def open_file(self):
         name = QtGui.QFileDialog.getOpenFileName(self, 'Load File')
-        img_loaded = Image.open(name)
-        self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img_loaded))
-        self.ui.label.setPixmap(self.pix)
+        if name:
+            img_loaded = Image.open(name)
+            self.pix = QtGui.QPixmap.fromImage(ImageQt.ImageQt(img_loaded))
+            self.ui.label.setPixmap(self.pix)
+            self.ui.saveButton.setDisabled(False)
+    
+    def save_file(self):
+        name = QtGui.QFileDialog.getSaveFileName(self, 'Save File', "qrcode.png")
+        self.pix.save(name)
         
         
     def close_app(self):
