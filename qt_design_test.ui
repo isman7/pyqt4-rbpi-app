@@ -176,6 +176,94 @@ QPushButton:hover:!pressed{
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>30</y>
+      <width>331</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="upButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border: 1px solid transparent;
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+}
+
+QPushButton:hover:!pressed{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}</string>
+       </property>
+       <property name="text">
+        <string>UP</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="downButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border: 1px solid transparent;
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+}
+
+QPushButton:hover:!pressed{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}</string>
+       </property>
+       <property name="text">
+        <string>DOWN</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLCDNumber" name="versionLcd">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>40</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>horizontalSlider</zorder>
+   <zorder>layoutWidget_3</zorder>
+   <zorder>versionLcd</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

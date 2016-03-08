@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'qt_design_test.ui'
 #
-# Created: Mon Mar  7 18:21:41 2016
+# Created: Mon Mar  7 19:19:16 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -140,6 +140,63 @@ class Ui_MainWindow(object):
 "}"))
         self.quitButton.setObjectName(_fromUtf8("quitButton"))
         self.horizontalLayout.addWidget(self.quitButton)
+        self.layoutWidget_3 = QtGui.QWidget(self.centralwidget)
+        self.layoutWidget_3.setGeometry(QtCore.QRect(450, 30, 331, 61))
+        self.layoutWidget_3.setObjectName(_fromUtf8("layoutWidget_3"))
+        self.horizontalLayout_3 = QtGui.QHBoxLayout(self.layoutWidget_3)
+        self.horizontalLayout_3.setMargin(0)
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        self.upButton = QtGui.QPushButton(self.layoutWidget_3)
+        self.upButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
+"padding: 6px 12px;\n"
+"margin-bottom: 0;\n"
+"font-size: 14px;\n"
+"font-weight: normal;\n"
+"line-height: 1.42857143;\n"
+"text-align: center;\n"
+"white-space: nowrap;\n"
+"vertical-align: middle;\n"
+"border: 1px solid transparent;\n"
+"color: #333;\n"
+"background-color: #fff;\n"
+"border-color: #ccc;\n"
+"}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"  color: #333;\n"
+"  background-color: #e6e6e6;\n"
+"  border-color: #adadad;\n"
+"}"))
+        self.upButton.setObjectName(_fromUtf8("upButton"))
+        self.horizontalLayout_3.addWidget(self.upButton)
+        self.downButton = QtGui.QPushButton(self.layoutWidget_3)
+        self.downButton.setStyleSheet(_fromUtf8("QPushButton{\n"
+"display: inline-block;\n"
+"padding: 6px 12px;\n"
+"margin-bottom: 0;\n"
+"font-size: 14px;\n"
+"font-weight: normal;\n"
+"line-height: 1.42857143;\n"
+"text-align: center;\n"
+"white-space: nowrap;\n"
+"vertical-align: middle;\n"
+"border: 1px solid transparent;\n"
+"color: #333;\n"
+"background-color: #fff;\n"
+"border-color: #ccc;\n"
+"}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"  color: #333;\n"
+"  background-color: #e6e6e6;\n"
+"  border-color: #adadad;\n"
+"}"))
+        self.downButton.setObjectName(_fromUtf8("downButton"))
+        self.horizontalLayout_3.addWidget(self.downButton)
+        self.versionLcd = QtGui.QLCDNumber(self.centralwidget)
+        self.versionLcd.setGeometry(QtCore.QRect(330, 40, 111, 41))
+        self.versionLcd.setObjectName(_fromUtf8("versionLcd"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
@@ -159,4 +216,6 @@ class Ui_MainWindow(object):
         self.saveButton.setText(_translate("MainWindow", "Save", None))
         self.runButton.setText(_translate("MainWindow", "Run", None))
         self.quitButton.setText(_translate("MainWindow", "Quit", None))
+        self.upButton.setText(_translate("MainWindow", "UP", None))
+        self.downButton.setText(_translate("MainWindow", "DOWN", None))
 
